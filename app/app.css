@@ -1,0 +1,46 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+#header_search{
+  margin-bottom: 3%;
+}
+
+/*attribuer la même hauteur pour chaque images*/
+img{
+  height: 200px!important;
+}
+
+
+/*format mobile pour eviter dallonger les images*/
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  img{
+    height: 100px!important;
+  }
+}
+
+#pagination{
+    margin-top: 3%;
+}
