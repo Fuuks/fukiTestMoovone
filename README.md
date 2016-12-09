@@ -1,4 +1,4 @@
-# MoovOne test AngularJS
+# MoovOne test Fuki AngularJS
 
 L'ojectif de ce test est de réaliser une micro app de recherche d'images gif [Giphy](http://giphy.com/).
 Cette application devra être sur une seule page avec un champ de recherche, la liste des images en fonction des mots clés saisis
