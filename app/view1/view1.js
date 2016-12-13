@@ -11,9 +11,9 @@ angular.module('myApp.view1', ['ngRoute','ui.bootstrap'])
 
 .controller('View1Ctrl', ['$scope','ApiGif',function($scope,ApiGif) {
 
-    $scope.mot;
-    $scope.currentPage =1;
-    $scope.itemsPerPage = 8;
+    $scope.mot; //mot de recherche
+    $scope.currentPage =1; //page courant initialisee a 1
+    $scope.itemsPerPage = 8; //nombre de gifs par page
     $scope.clickGo = false; //click sur le bouton de recherche
     $scope.errorConnexion = false;
 
@@ -31,6 +31,8 @@ angular.module('myApp.view1', ['ngRoute','ui.bootstrap'])
             console.log(data.data);
             $scope.liste = data.data; //recuperation des datas
             $scope.totalItems = $scope.liste.length; //nombre total de gifs
+
+            $scope.errorConnexion = false;// connexion a nouveau retablie
         }).error(function(error){
 
             $scope.errorConnexion = true;
@@ -59,7 +61,7 @@ angular.module('myApp.view1', ['ngRoute','ui.bootstrap'])
 
 .factory('ApiGif',function($http,$q){
 
-    var apiKey = 'dc6zaTOxFJmzC';
+    var apiKey = 'dc6zaTOxFJmzC'; //cle de lapi
     var apiUrl = 'http://api.giphy.com/v1/gifs/';
     var Gif = {};
 

@@ -19,11 +19,11 @@
 
 </div>
 
-<div ng-if="clickGo" ng-show="!totalItems" class="alert alert-danger" role="alert">
+<div ng-if="clickGo && !errorConnexion" ng-show="!totalItems" class="alert alert-danger" role="alert">
     <a class="alert-link">Aucuns gifs ne correspond à cette recherche. Re saisir un mot.</a>
 </div>
 
-<div ng-if="errorConnecion" class="alert alert-warning" role="alert">
+<div ng-if="errorConnexion" class="alert alert-warning" role="alert">
     <a class="alert-link">Problème de connexion.</a>
 </div>
 
